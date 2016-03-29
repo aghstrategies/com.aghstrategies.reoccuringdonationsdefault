@@ -8,9 +8,11 @@ require_once 'reoccuringdonationsdefault.civix.php';
  */
 function reoccuringdonationsdefault_civicrm_buildForm($formName, &$form) {
   if ($formName == "CRM_Contribute_Form_Contribution_Main") {
-    if ($form->getAction() == CRM_Core_Action::ADD) {
-      $defaults['is_recur'] = '1';
-      $form->setDefaults($defaults);
+    if ($form->_id == '8') {
+      if ($form->getAction() == CRM_Core_Action::ADD) {
+        $defaults['is_recur'] = '1';
+        $form->setDefaults($defaults);
+      }
     }
   }
 }
