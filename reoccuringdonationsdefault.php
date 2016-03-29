@@ -3,6 +3,18 @@
 require_once 'reoccuringdonationsdefault.civix.php';
 
 /**
+ * [reoccuringdonationsdefault_civicrm_buildForm description]
+ *
+ */
+function reoccuringdonationsdefault_civicrm_buildForm($formName, &$form) {
+  if ($formName == "CRM_Contribute_Form_Contribution_Main") {
+    if ($form->getAction() == CRM_Core_Action::ADD) {
+      $defaults['is_recur'] = '1';
+      $form->setDefaults($defaults);
+    }
+  }
+}
+/**
  * Implements hook_civicrm_config().
  *
  * @link http://wiki.civicrm.org/confluence/display/CRMDOC/hook_civicrm_config
