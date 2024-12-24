@@ -11,14 +11,21 @@
   <urls>
     <url desc="Licensing">http://www.gnu.org/licenses/agpl-3.0.html</url>
   </urls>
-  <releaseDate>2016-03-29</releaseDate>
-  <version>1.0</version>
+  <releaseDate>2024-12-24</releaseDate>
+  <version>1.1</version>
   <develStage>alpha</develStage>
   <compatibility>
-    <ver>4.6</ver>
+    <ver>5.45</ver>
   </compatibility>
   <comments>This is a new, undeveloped module</comments>
   <civix>
     <namespace>CRM/Reoccuringdonationsdefault</namespace>
+    <format>24.09.1</format>
   </civix>
+  <classloader>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <mixins>
+    <mixin>entity-types-php@2.0.0</mixin>
+  </mixins>
 </extension>
